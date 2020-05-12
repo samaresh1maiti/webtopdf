@@ -1,27 +1,180 @@
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+#firstRow{
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 30px;
+  width: 50%;
+  background-color:rgb(65, 197, 241);
 }
-
-#container strong {
+#survey{
+  margin-left: 20px;
+  font-size: larger;
+  font-weight: bold;
+  height: 30px;
+  width: 50%;
+  border-bottom: 3px solid black;
+}
+#michelinContact{
+  height: 150px;
+  width: 100%;
+  margin-left: 20px;
+}
+#label{
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+img{
+  height: 130px;
+}
+#image{
+  margin-left: 300px;
+}
+#contact{
+  width: 70%;
+}
+#secondRow{
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 30px;
+  background-color:rgb(65, 197, 241);
+}
+#date{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 15px;
+}
+#thirdRow{
+  height: 20px;
+  margin-left: 20px;
+  width: 40%;
+  background-color: rgb(65, 197, 241);
+}
+#pictures{
+  margin-left: 20px;
+}
+#picturesText{
+  margin-top: 10px;
   font-size: 20px;
-  line-height: 26px;
+  font-weight: bold;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#image{
+  margin-top: 10px;
+  // margin-left: 200px;
+  text-align: center;
+  // height: 400px;
+  width: 500px;
 }
+#text{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-top: 2px solid rgb(224, 222, 216);
+  border-bottom: 2px solid rgb(224, 222, 216);
+  text-align: center;
+  height: 80px;
+}
+#textContent{
+ color: rgb(185, 179, 179);
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+}
+#gapOf{
+  height: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+  width: 40%;
+  background-color: rgb(65, 197, 241);
+}
+#conditions{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+#comment{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#comment1{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin: 5px;
+  border-bottom: 2px solid black;
+}
+#commentText{
+  margin: 5px;
+  font-weight: bold;
+}
+#image1{
+  position: relative;
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 100%;
+}
+#table1{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: large;
+  background-color: rgb(219, 215, 209);
+  font-weight: bold;
+  height: 30px;
+  border: rgb(235, 226, 226) 1px solid;
+}
+#title{
+  font-weight: bold;
+  font-size: medium;
+  border: rgb(235, 226, 226) 1px solid;
+}
+#tableContent{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  background-color: rgb(240, 236, 233);
+}
+#content{
+border: white 1px solid; 
+margin-top: 3px;
+margin-bottom: 3px;
+font-size: medium;
+height: 40px;
+}
+#commentPicture{
+  // width: 100%;
+  border-top: white 2px solid;
+  margin-top: 2px;
+  background-color:  rgb(240, 236, 233);
+}
+#image2{
+  margin-top: 30px;
+}
+#footer{
+  // margin-left:10px;
+  margin-top: 20px;
+  // margin-right: 10px;
+  // width: 90%;
+}
+#footerLabel{
+  font-size: large;
+  font-weight: bold;
+  color: blue;
+  margin-top: 30px !important;
+}
+#anotherLabel{
+  margin-left: 0px;
+  // margin-top: 45px;
 
-#container a {
-  text-decoration: none;
+}
+button{
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  border-radius: 10px;
 }

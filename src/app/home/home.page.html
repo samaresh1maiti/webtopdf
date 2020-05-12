@@ -1,20 +1,293 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-row><button (click)="downloadAsPDF()">
+    Save as PDF
+  </button></ion-row>
+  
+  <div id="content" #content>
+  <ion-row id="firstRow"> </ion-row>
+  <!-- This row for the title -->
+  <ion-row id="survey">
+    <label>SITE SEVERITY SERVEY</label>
+  </ion-row>
+  <!-- This row for the michelin contact field and michelin image -->
+  <ion-row id="michelinContact">
+    <ion-col col-10 id="contact">
+      <ion-row>
+        <ion-label id="label">
+          MICHELIN Contact
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>Mobile:</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>Customer Email:</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>Tel:</ion-label>
+      </ion-row>
+    </ion-col>
+    <!-- This column for the michelin image -->
+    <ion-col col-2 id="image">
+      <!-- <ion-img> -->
+      <img src="assets/img/images1.png" alt="michelin image" />
+      <!-- </ion-img> -->
+    </ion-col>
+  </ion-row>
+  <!-- This row for the  showing of the from and to date -->
+  <ion-row id="secondRow">
+    <ion-label id="date">
+      Survey Date: From 05/05/05 To 05/05/05
+    </ion-label>
+  </ion-row>
+  <ion-row style="width: 100%; height: 30px;"> </ion-row>
+  <ion-row id="thirdRow"> </ion-row>
+  <ion-row id="pictures">
+    <ion-label id="picturesText">
+      Survey Site Pictures
+    </ion-label>
+  </ion-row>
+  <!-- this row for the pictures -->
+  <ion-row id="image1">
+    <img
+      style="margin-left: 600px; height: 300px;"
+      src="assets/img/image1.jpg"
+      alt="your image"
+    />
+  </ion-row>
+  <!-- This row is for the notification -->
+  <ion-row id="text">
+    <ion-row
+      style="
+        display: flex !important;
+        justify-content: center !important;
+        width: 100%;
+      "
+      ><ion-label id="textContent"
+        >Please find attached site Severiry servey carried on your
+        site</ion-label
+      ></ion-row
+    >
+    <ion-row style="width: 100%;">
+      <label
+        id=" label2"
+        style="
+          width: 100%;
+          text-align: right;
+          font-weight: bold;
+          font-size: 15px;
+        "
+      >
+        -05/05/2020
+      </label>
+    </ion-row>
+  </ion-row>
+  <ion-row id="comment">
+    <ion-card>
+      <ion-row style="width: 100%; text-align: center;">
+        <label id="comment1">Comment:</label>
+      </ion-row>
+      <ion-row>
+        <ion-label id="commentText">
+          You will need support for style if needed (IIRC it comes first if
+          used). Notice that font-size is fourth parameter, so this will not
+          work if you will have/not have font-variant(bold,italic,oblique),
+          font-variant(normal, small-caps) and font-weight(bold etc). You will
+          need support for style if needed (IIRC it comes first if used). Notice
+          that font-size is fourth parameter, so this will not work if you will
+          have/not have font-variant(bold,italic,oblique), font-variant(normal,
+          small-caps) and font-weight(bold etc). You will need support for style
+          if needed (IIRC it comes first if used). Notice that font-size is
+          fourth parameter, so this will not work if you will have/not have
+          font-variant(bold,italic,oblique), font-variant(normal, small-caps)
+          and font-weight(bold etc). You will need support for style if needed
+          (IIRC it comes first if used). Notice that font-size is fourth
+          parameter, so this will not work if you will have/not have
+          font-variant(bold,italic,oblique), font-variant(normal, small-caps)
+          and font-weight(bold etc).
+        </ion-label>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row id="gapOf"></ion-row>
+  <!-- This is for the working conditions -->
+  <ion-row>
+    <label id="conditions">Working Conditions</label>
+  </ion-row>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- start of the table -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div  *ngFor="let title of titles,index as i">
+    <ion-card>
+      <ion-row id="table1">
+        {{title}}
+      </ion-row>
+      <ion-row id="tableContent">
+        <ion-row>
+          <ion-col id="firstColumn">
+            <ion-row id="title">Item</ion-row>
+            <ion-row id="content">Surface Material</ion-row>
+            <ion-row id="content">Condition of Surface</ion-row>
+            <ion-row id="content">Level Changes</ion-row>
+            <ion-row id="content">Potoholes</ion-row>
+            <ion-row id="content">Foriegn Objects</ion-row>
+            <ion-row id="content">Obstacles</ion-row>
+            <ion-row id="content">Presence of oil on groung</ion-row>
+            <ion-row id="content">Rails</ion-row>
+          </ion-col>
+          <ion-col id="secondColumn">
+            <ion-row id="title">Item Description</ion-row>
+            <ion-row id="content">Asphab/Tomac</ion-row>
+            <ion-row id="content"
+              >Some area of operating surface of poor condition or undualed
+              surface</ion-row
+            >
+            <ion-row id="content"
+              >Level changes that will cause tyre damages</ion-row
+            >
+            <ion-row id="content">Full of deep and wide potholes</ion-row>
+            <ion-row id="content"
+              >Rare presence of forieng objects,small diameter</ion-row
+            >
+            <ion-row id="content">No obstacles</ion-row>
+            <ion-row id="content">No oil</ion-row>
+            <ion-row id="content"
+              >Large amount of rails in the area which pose a constant on the
+              tyre</ion-row
+            >
+          </ion-col>
+          <ion-col id="thirdColumn">
+            <ion-row id="title">Consequences</ion-row>
+            <ion-row id="content">No</ion-row>
+            <ion-row id="content">Tyre damages,aggression,shocks</ion-row>
+            <ion-row id="content">Tyre damages,aggression,shocks</ion-row>
+            <ion-row id="content">Tyre damages,aggression,shocks</ion-row>
+            <ion-row id="content">No</ion-row>
+            <ion-row id="content">No</ion-row>
+            <ion-row id="content">No</ion-row>
+            <ion-row id="content">No</ion-row>
+          </ion-col>
+          <ion-col id="fourthColumn">
+            <ion-row id="title">Recomondation</ion-row>
+            <ion-row id="content">No Associated Recomendation</ion-row>
+            <ion-row id="content"
+              >Repair damaged area of surface to prevent tyre damages</ion-row
+            >
+            <ion-row id="content"
+              >Build smooth level changes to protect tyres</ion-row
+            >
+            <ion-row id="content">Repair pathloes to prevent tyres</ion-row>
+            <ion-row id="content">No Associated Recomendation</ion-row>
+            <ion-row id="content">No Associated Recomendation</ion-row>
+            <ion-row id="content">No Associated Recomendation</ion-row>
+            <ion-row id="content">No Associated Recomendation</ion-row>
+          </ion-col>
+          <ion-col id="fifthColumn">
+            <ion-row id="title">Status</ion-row>
+            <ion-row id="content"
+              ><ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+            <ion-row id="content">
+              <ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+            <ion-row id="content">
+              <ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+            <ion-row id="content">
+              <ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+            <ion-row id="content">
+              <ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+            <ion-row id="content">
+              <ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+            <ion-row id="content">
+              <ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+            <ion-row id="content">
+              <ion-icon name="checkmark-circle-outline"></ion-icon
+            ></ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row id="commentPicture">
+          <ion-col col-8>
+            <ion-row id="comment1">
+              COMMENT
+            </ion-row>
+            <ion-row>
+              <ion-label id="commentText">
+                You will need support for style if needed (IIRC it comes first
+                if used). Notice that font-size is fourth parameter, so this
+                will not work if you will have/not have
+                font-variant(bold,italic,oblique), font-variant(normal,
+                small-caps) and font-weight(bold etc). You will need support for
+                style if needed (IIRC it comes first if used). Notice that
+                font-size is fourth parameter, so this will not work if you will
+                have/not have font-variant(bold,italic,oblique),
+                font-variant(normal, small-caps) and font-weight(bold etc). You
+                will need support for style if needed (IIRC it comes first if
+                used). Notice that font-size is fourth parameter, so this will
+                not work if you will have/not have
+                font-variant(bold,italic,oblique), font-variant(normal,
+                small-caps) and font-weight(bold etc). You will need support for
+                style if needed (IIRC it comes first if used). Notice that
+                font-size is fourth parameter, so this will not work if you will
+                have/not have font-variant(bold,italic,oblique),
+                font-variant(normal, small-caps) and font-weight(bold etc).
+              </ion-label>
+            </ion-row>
+          </ion-col>
+          <ion-col col-4 id="image2">
+            <img
+              style="height: 270px; margin-left: 100px;"
+              src="assets/img/image1.jpg"
+              alt="your image"
+            />
+          </ion-col>
+        </ion-row>
+      </ion-row>
+    </ion-card>
   </div>
+  <ion-row id="footer">
+    <ion-card style="width: 100%;">
+      <ion-row>
+        <ion-col style="width: 40%;">
+          <ion-col>
+            <img
+              style="height: 100px; float: right;"
+              src="assets/img/image3.jpg"
+              alt="your image"
+            />
+          </ion-col>
+        </ion-col>
+        <ion-col style="width: 40%;">
+         
+            <ion-row>
+              <label id="footerLabel">New Michelin proposal</label>
+            </ion-row>
+            <ion-row>
+              <ion-label id="anotherLabel">
+                www.dfjgdjsgjfgdjf.com
+              </ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label id="anotherLabel">
+                michelin proposal
+              </ion-label>
+            </ion-row>
+        </ion-col>
+        <ion-col style="width: 20%;">
+          <img
+            style="height: 100px; float: right;"
+            src="assets/img/images2.png"
+            alt="your image"
+          />
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  
+</div>
+
 </ion-content>

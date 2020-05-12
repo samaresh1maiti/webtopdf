@@ -1,5 +1,7 @@
 {
   "name": "fuelTool",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
